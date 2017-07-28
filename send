@@ -1,0 +1,81 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use POSIX qw(strftime);
+use Net::Address::IP::Local;
+use URI::Encode qw(uri_encode);
+
+#use Yabs::Logger;
+
+sub get_parent_pid {
+	my $pid = shift;
+
+	my $result_pid = `ps -o ppid= -p $pid`;
+
+	$result_pid =~ s/\D//g;
+	chomp($result_pid);
+
+	return $result_pid;
+}
+
+sub get_screen_name_by_pid {
+	my $pid = shift;
+
+	my $screen_name = `ps -p $pid -o args  | grep -E -i 'screen.*rds'  | awk '{print \$3;}'`;
+
+	chomp($screen_name);
+
+	return $screen_name;
+}
+
+sub get_current_screen {
+	my $pid = $$;
+	my $screen_name = undef;
+
+	while (!$screen_name) {
+		$screen_name = get_screen_name_by_pid($pid);
+		$pid = get_parent_pid($pid);
+	}
+	return $screen_name;
+}
+
+sub get_hostname {
+	my $hostname = `hostname -f`;
+
+	chomp($hostname);
+
+	return $hostname;
+}
+
+sub send_message {
+	my $message = shift;
+
+#	system("/usr/bin/python ~/send_by_jabber.py olegts\@yandex-team.ru '$message'");
+	system("curl 'https://api.telegram.org/bot394996323:AAHbff0HBOq4iNF8CpRNzqWMO6rv2AEkwRA/sendMessage?chat_id=172034672&text=" . uri_encode($message). "'; echo");
+}
+
+sub get_user_name {
+	my $username = `whoami`;
+	chomp($username);
+	return $username;
+}
+
+
+my $user = get_user_name();
+my $hostname = `hostname`;
+my $screen_name = get_current_screen();
+
+my $message = "$screen_name :: $hostname";
+my $test = shift;
+
+if (defined($test) && $test eq 'test') {
+	print "$message\n";
+} elsif (defined($test) && $test eq 'email') {
+	send_letter($message);
+	send_message($message);
+} else {
+	send_message($message);
+}
+

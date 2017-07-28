@@ -1,0 +1,199 @@
+  DB<3> c
+2010/10/28 18:07:05 20320 INFO  [yabs_file_lock] locked
+2010/10/28 18:07:05 20320 INFO  [        main::] process count in testing mode: 1
+ReadGlobalInfo: Unable to read 'hosts': No such file or directory
+2010/10/28 18:07:05 20320 ERROR [ get_host_fqdn] Can't get_hosts_from_file      (Yabs::Host @/usr/share/perl5/Yabs/Host.pm:278)
+2010/10/28 18:07:05 20320 WARN  [canonize_hostn] Use of uninitialized value $host in substitution (s///) at /usr/share/perl5/Yabs/Host.pm line 295, <$handle> line 98.      (Yabs::Host @/usr/share/perl5/Yabs/Host.pm:295)
+2010/10/28 18:07:05 20320 WARN  [canonize_hostn] Use of uninitialized value $host in substitution (s///) at /usr/share/perl5/Yabs/Host.pm line 296, <$handle> line 98.      (Yabs::Host @/usr/share/perl5/Yabs/Host.pm:296)
+2010/10/28 18:07:05 20320 WARN  [canonize_hostn] Use of uninitialized value $host in substitution (s///) at /usr/share/perl5/Yabs/Host.pm line 297, <$handle> line 98.      (Yabs::Host @/usr/share/perl5/Yabs/Host.pm:297)
+ReadGlobalInfo: Unable to read 'hosts': No such file or directory
+2010/10/28 18:07:05 20320 ERROR [ get_host_fqdn] Can't get_hosts_from_file      (Yabs::Host @/usr/share/perl5/Yabs/Host.pm:278)
+2010/10/28 18:07:05 20320 WARN  [get_host_for_g] Use of uninitialized value $hostname_for_graphite in substitution (s///) at /usr/share/perl5/Yabs/Host.pm line 266, <$handle> line 98.     (Yabs::Host @/usr/share/perl5/Yabs/Host.pm:266)
+2010/10/28 18:07:05 20320 WARN  [           new] Use of uninitialized value in join or string at /usr/share/perl5/Yabs/ScriptControl/Client.pm line 56, <$handle> line 98.  (Yabs::ScriptControl::Client @/usr/share/perl5/Yabs/ScriptControl/Client.pm:56)
+ReadGlobalInfo: Unable to read 'scriptcontrol/olegts.haze/autobudget': No such file or directory
+2010/10/28 18:07:05 20320 INFO  [        main::] autobudget(17) 20101028180500 started
+2010/10/28 18:07:05 20320 INFO  [      map_base] base mapping: 'local:yabsdb:3306' -> 'local:abft_yabsdb:3306' (rplcat:slvrkng) by rule 'local:yabsdb local:abft_yabsdb'
+2010/10/28 18:07:05 20320 INFO  [        main::] Skipping autobudget0, because of it's previous launch was at 20120710143000
+2010/10/28 18:07:05 20320 INFO  [        main::] Creating AutoBudget tables...
+2010/10/28 18:07:05 20320 INFO  [        main::] Load default AB coeffs
+2010/10/28 18:07:06 20320 INFO  [        main::] load_pattern_time_tar
+2010/10/28 18:07:06 20320 INFO  [        main::] Skipping autobudget0, because of it's previous launch was at 20120710143000
+ReadGlobalInfo: Unable to read 'timestats/timestats4.json': No such file or directory
+2010/10/28 18:07:06 20320 WARN  [get_timestats4] Use of uninitialized value $clname in concatenation (.) or string at /usr/share/perl5/Yabs/Host.pm line 216, <$handle> line 98.    (Yabs::Host @/usr/share/perl5/Yabs/Host.pm:216)
+2010/10/28 18:07:06 20320 ERROR [get_timestats4] unable to get timestats for cluster    (Yabs::Host @/usr/share/perl5/Yabs/Host.pm:216)
+2010/10/28 18:07:06 20320 INFO  [      map_base] base mapping: 'local:yabsinfo:3306' -> 'local:abft_yabsinfo:3306' (rplcat:slvrkng) by rule 'local:yabsinfo local:abft_yabsinfo'
+ReadGlobalInfo: Unable to read 'timestats/timestats4.json': No such file or directory
+2010/10/28 18:07:06 20320 WARN  [get_timestats4] Use of uninitialized value $clname in concatenation (.) or string at /usr/share/perl5/Yabs/Host.pm line 216, <$handle> line 98.    (Yabs::Host @/usr/share/perl5/Yabs/Host.pm:216)
+2010/10/28 18:07:06 20320 ERROR [get_timestats4] unable to get timestats for cluster    (Yabs::Host @/usr/share/perl5/Yabs/Host.pm:216)
+2010/10/28 18:07:06 20320 INFO  [comeup_with_ot] Current max actionid 0 for task AutoBudget17
+2010/10/28 18:07:06 20320 INFO  [comeup_with_ot] New actionid: 1, subactionid: 1 for task AutoBudget17
+2010/10/28 18:07:06 20320 INFO  [           new] Host olegts.haze
+2010/10/28 18:07:06 20320 INFO  [           new] Presleep before init DLock: 0 for task AutoBudget17
+2010/10/28 18:07:06 20320 INFO  [          lock] Get quorum(1/1) while locking
+2010/10/28 18:07:06 20320 INFO  [comeup_with_ot] Current max actionid 0 for task AutoBudget17
+2010/10/28 18:07:06 20320 INFO  [comeup_with_ot] New actionid: 1, subactionid: 1 for task AutoBudget17
+2010/10/28 18:07:06 20320 INFO  [     is_master] olegts.haze has become master for action AutoBudget17 1-1
+2010/10/28 18:07:06 20320 INFO  [      map_base] base mapping: 'local:yabsdb:3306' -> 'local:abft_yabsdb:3306' (rplcat:slvrkng) by rule 'local:yabsdb local:abft_yabsdb'
+2010/10/28 18:07:06 20320 INFO  [showscorr_is_s] Autobdget ShowsCorr run in external script
+2010/10/28 18:07:06 20320 INFO  [    forkTasks2] forkTasks2 doesn't use PoolController
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] Started autobudget0 thread(previous start 20160725140000)
+2010/10/28 18:07:06 21428 INFO  [      map_base] base mapping: 'local:yabsdb:3306' -> 'local:abft_yabsdb:3306' (rplcat:slvrkng) by rule 'local:yabsdb local:abft_yabsdb'
+2010/10/28 18:07:06 21428 INFO  [  prepare_data] Find out experemental launch information...
+2010/10/28 18:07:06 21428 INFO  [autobudget_fea] Feature ab-feature is active on host olegts.haze
+2010/10/28 18:07:06 21428 INFO  [is_experiment_] Experiment launch turned on by host option
+2010/10/28 18:07:06 21428 INFO  [  prepare_data] Loading OrderStat...
+2010/10/28 18:07:06 21428 INFO  [load_order_sta] Load OrderInfo
+2010/10/28 18:07:06 21428 INFO  [load_order_sta] Load OrderStat
+2010/10/28 18:07:06 21428 INFO  [load_order_sta] Load AutoBudgetOrder
+2010/10/28 18:07:06 21428 INFO  [load_order_sta] Load Context
+2010/10/28 18:07:06 21428 INFO  [load_order_sta] Load AutoBudgetStatCurWeek
+2010/10/28 18:07:06 21428 INFO  [load_order_sta] Load actions and prices from ABExperimentCurWeek
+2010/10/28 18:07:06 21428 INFO  [load_order_sta] Load actions and costs from ABExperimentCurWeek (prev week)
+2010/10/28 18:07:06 21428 INFO  [load_order_sta] Load costs from Load OrderStatCurDay
+2010/10/28 18:07:06 21428 INFO  [load_order_sta] Load AutoBudgetOrderHistoryMoney
+2010/10/28 18:07:06 21428 INFO  [load_order_sta] Load AutoBudgetOrderHistoryClicks
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig real spent clicks for OrderID = 1: 75
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig week spent clicks for OrderID = 1: 75
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig real spent money for OrderID = 1: 10000000
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig week spent money for OrderID = 1: 10000000
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig real spent clicks for OrderID = 2: 75
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig week spent clicks for OrderID = 2: 75
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig real spent money for OrderID = 2: 78000000
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig week spent money for OrderID = 2: 78000000
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig real spent clicks for OrderID = 3: 75
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig week spent clicks for OrderID = 3: 75
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig real spent money for OrderID = 3: 78000000
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig week spent money for OrderID = 3: 78000000
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig real spent clicks for OrderID = 4: 75
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig week spent clicks for OrderID = 4: 75
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig real spent money for OrderID = 4: 71000000
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig week spent money for OrderID = 4: 71000000
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig real spent clicks for OrderID = 5: 75
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig week spent clicks for OrderID = 5: 75
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig real spent money for OrderID = 5: 78000000
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig week spent money for OrderID = 5: 78000000
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig real spent clicks for OrderID = 6: 1150
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig week spent clicks for OrderID = 6: 1150
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig real spent money for OrderID = 6: 1377620000
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig week spent money for OrderID = 6: 1377620000
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig real spent clicks for OrderID = 7: 1150
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig week spent clicks for OrderID = 7: 1150
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig real spent money for OrderID = 7: 1377620000
+2010/10/28 18:07:06 21428 INFO  [load_experimen] Orig week spent money for OrderID = 7: 1377620000
+2010/10/28 18:07:06 21428 INFO  [load_order_sta] Load OrderTargetStat
+2010/10/28 18:07:06 21428 INFO  [fill_orders_ab] While testing_mode use default_coeff for previous 5 min interval (for ft-compatibility). See load_coeffs() function
+2010/10/28 18:07:06 21428 INFO  [fill_orders_ab] While testing_mode use default_coeff for previous 5 min interval (for ft-compatibility). See load_coeffs() function
+2010/10/28 18:07:06 21428 INFO  [fill_orders_ab] While testing_mode use default_coeff for previous 5 min interval (for ft-compatibility). See load_coeffs() function
+2010/10/28 18:07:06 21428 INFO  [fill_orders_ab] While testing_mode use default_coeff for previous 5 min interval (for ft-compatibility). See load_coeffs() function
+2010/10/28 18:07:06 21428 INFO  [fill_orders_ab] While testing_mode use default_coeff for previous 5 min interval (for ft-compatibility). See load_coeffs() function
+2010/10/28 18:07:06 21428 INFO  [fill_orders_ab] While testing_mode use default_coeff for previous 5 min interval (for ft-compatibility). See load_coeffs()
+function
+2010/10/28 18:07:06 21428 INFO  [fill_orders_ab] While testing_mode use default_coeff for previous 5 min interval (for ft-compatibility). See load_coeffs() function
+2010/10/28 18:07:06 21428 INFO  [fill_orders_ab] While testing_mode use default_coeff for previous 5 min interval (for ft-compatibility). See load_coeffs() function
+2010/10/28 18:07:06 21428 INFO  [fill_orders_ab] While testing_mode use default_coeff for previous 5 min interval (for ft-compatibility). See load_coeffs() function
+2010/10/28 18:07:06 21428 INFO  [fill_orders_ab] While testing_mode use default_coeff for previous 5 min interval (for ft-compatibility). See load_coeffs() function
+2010/10/28 18:07:06 21428 INFO  [fill_orders_ab] While testing_mode use default_coeff for previous 5 min interval (for ft-compatibility). See load_coeffs() function
+2010/10/28 18:07:06 21428 INFO  [fill_orders_ab] While testing_mode use default_coeff for previous 5 min interval (for ft-compatibility). See load_coeffs() function
+2010/10/28 18:07:06 21428 INFO  [fill_orders_ab] While testing_mode use default_coeff for previous 5 min interval (for ft-compatibility). See load_coeffs() function
+2010/10/28 18:07:06 21428 INFO  [fill_orders_ab] While testing_mode use default_coeff for previous 5 min interval (for ft-compatibility). See load_coeffs() function
+2010/10/28 18:07:06 21428 INFO  [  prepare_data] Loading CTRs and Prices...
+2010/10/28 18:07:06 21428 INFO  [ load_forecast] Load Banners
+2010/10/28 18:07:06 21428 INFO  [ load_forecast] Load BroadMatchStat
+2010/10/28 18:07:06 21428 INFO  [ load_forecast] Load PhrasePrice
+2010/10/28 18:07:06 21428 INFO  [load_current_p] lazy_phrases_part_condition = 1
+2010/10/28 18:07:06 21428 INFO  [load_current_p] Resticting lazy phrases disabled
+2010/10/28 18:07:06 21428 INFO  [ load_forecast] LoadAdjustedStat/ABAdjustedStatTZCoeff
+2010/10/28 18:07:06 21428 INFO  [ load_forecast] LoadAdjustedStat/ABAdjustedStatTZCoeff (2) flat buckets
+2010/10/28 18:07:06 21428 INFO  [load_flat_buck] load_flat_buckets: rows: 7
+2010/10/28 18:07:06 21428 INFO  [ load_forecast] LoadBadTargHistory
+2010/10/28 18:07:06 21428 INFO  [ load_forecast] Loading CostsForecast
+2010/10/28 18:07:06 21428 FATAL [load_costs_for] Cannot get bsbud base_time from comment of CostsForecast0 table        (Yabs::AutoBudget::LoadData @/usr/share/perl5/Yabs/AutoBudget/LoadData.pm:3997)
+2010/10/28 18:07:06 21428 INFO  [load_costs_for] Into ABOrderBadBidMonitoring17_1_1 inserted: 6 rows
+2010/10/28 18:07:06 21428 INFO  [ load_forecast] Load AutoBudgetShowsCorr
+2010/10/28 18:07:06 21428 INFO  [ load_forecast] Load forecast
+2010/10/28 18:07:06 21428 INFO  [load_all_forec] Starting to load forecast for apc...
+2010/10/28 18:07:06 21428 INFO  [load_all_forec] Got models to use : simple, default: simple
+2010/10/28 18:07:06 21428 INFO  [load_all_forec] Starting to load forecast for ppc...
+2010/10/28 18:07:06 21428 INFO  [load_all_forec] Got models to use : simple, default: simple
+2010/10/28 18:07:06 21428 INFO  [load_all_forec] Starting to load forecast for ctr...
+2010/10/28 18:07:06 21428 INFO  [load_all_forec] Got models to use : simple, default: simple
+2010/10/28 18:07:06 21428 INFO  [ load_forecast] Load AutoBudgetPriority
+2010/10/28 18:07:06 21428 INFO  [load_order_gro] Load ABOidGidPhrState
+2010/10/28 18:07:06 21428 INFO  [cleanup_empty_] Try to find empty banners
+2010/10/28 18:07:06 21428 ERROR [  _load_groups] _load_groups failed: Table 'abft_yabsdb.ABOrderGroups' doesn't exist   (Yabs::AutoBudget::GroupMatch @/usr/share/perl5/Yabs/AutoBudget/GroupMatch.pm:36)
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] Loading order 6 autobudget coeffs...
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] Looking to order 6
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] Loading order 6 time targetting coeffs...
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] Order 6 is adv net only
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] Order 6 order_time_tar_coeff=0.38128,order_active=1,order_week_coeff=1.000,fake_spent_piece=1.000,tt_coeff=0.00215
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] order 6 TimeTarg: 0: 111111111111111111111111
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] order 6 TimeTarg: 1: 111111111111111111111111
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] order 6 TimeTarg: 2: 111111111111111111111111
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] order 6 TimeTarg: 3: 111111111111111111111111
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] order 6 TimeTarg: 4: 111111111111111111111111
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] order 6 TimeTarg: 5: 111111111111111111111111
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] order 6 TimeTarg: 6: 111111111111111111111111
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] order 6 TimeTarg: 7: 000000000000000000000010
+2010/10/28 18:07:06 21428 INFO  [     get_coeff] Order 6 last_day=7, turned_off_yesterday=0
+2010/10/28 18:07:06 21428 INFO  [     get_coeff] Order 6, slope exeedance changed to 4.5
+2010/10/28 18:07:06 21428 INFO  [     get_coeff] Order 6, start bid multiplier changed to 1
+2010/10/28 18:07:06 21428 INFO  [     get_coeff] Order 6, flat hits multiplier changed to 0.005
+2010/10/28 18:07:06 21428 INFO  [  calc_eis_eic] Order 6 money coeffs: corr 3.0000, shift 0.0000, final 0.0064
+2010/10/28 18:07:06 21428 INFO  [  calc_eis_eic] Order 6 money overdraft = -56%, balance_by_plan = 9532.09$, balance = 23622.38$
+2010/10/28 18:07:06 21428 WARN  [      calc_eir] Order 6 has negative reserve -1377.62$ (Yabs::AutoBudget::Limitations @/usr/share/perl5/Yabs/AutoBudget/Limitations.pm:624)
+2010/10/28 18:07:06 21428 INFO  [      calc_eir] Order 6 reserve 240.00$, reserve overdraft 0.00, eir 1.9641, is_full_cost$
+2010/10/28 18:07:06 21428 INFO  [      calc_eir] Order 6 reserve 240.00$, reserve overdraft 0.00, eir 1.9641, is_full_cost$
+2010/10/28 18:07:06 21428 INFO  [get_avg_strate] Calc max cost ( 1 + 0.05 * 240000000 / 75000000 ) * 75000000
+2010/10/28 18:07:06 21428 INFO  [optimize_for_f] order 6: good after LimitMaxCost 1
+2010/10/28 18:07:06 21428 INFO  [calc_flat_bids] Calculate net bids for order 6
+2010/10/28 18:07:06 21428 INFO  [calc_flat_bids] Order 6, total clicks capacity: 0.02
+2010/10/28 18:07:06 21428 INFO  [calc_flat_bids] Order 6 net limits: eis 152.1033$, eic 0.0000, eir 1.9641$
+2010/10/28 18:07:06 21428 INFO  [calc_flat_bids] Order 6, net_plan_money: 2.22$, net_plan_clicks: 0.26
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] Order 6 money total_to_spent= 15210.3283 c, spent_plan = 0.0000 c, context_limit = 0, broad=off, ab_problems = 2
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] Order 6 clicks total_to_spent = 0.0000, spent_plan = 0.0000
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] Loading order 4 autobudget coeffs...
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] Looking to order 4
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] Loading order 4 time targetting coeffs...
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] Order 4 order_time_tar_coeff=0.38128,order_active=1,order_week_coeff=1.000,fake_spent_piece=1.000,tt_coeff=0.00215
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] order 4 TimeTarg: 0: 111111111111111111111111
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] order 4 TimeTarg: 1: 111111111111111111111111
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] order 4 TimeTarg: 2: 111111111111111111111111
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] order 4 TimeTarg: 3: 111111111111111111111111
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] order 4 TimeTarg: 4: 111111111111111111111111
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] order 4 TimeTarg: 5: 111111111111111111111111
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] order 4 TimeTarg: 6: 111111111111111111111111
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] order 4 TimeTarg: 7: 000000000000000000000010
+2010/10/28 18:07:06 21428 INFO  [     get_coeff] Order 4 last_day=7, turned_off_yesterday=0
+2010/10/28 18:07:06 21428 INFO  [  calc_eis_eic] Order 4 money coeffs: corr 0.7326, shift 0.0000, final 0.0016
+2010/10/28 18:07:06 21428 INFO  [  calc_eis_eic] Order 4 money overdraft = 2%, balance_by_plan = 41.94$, balance = 39.00$
+2010/10/28 18:07:06 21428 INFO  [      calc_eir] Order 4 reserve 25929.00$, reserve overdraft -225.95, eir 212.1913, is_full_cost$
+2010/10/28 18:07:06 21428 INFO  [      calc_eir] Order 4 reserve 26000.00$, reserve overdraft 0.00, eir 212.7723, is_full_cost$
+2010/10/28 18:07:06 21428 INFO  [optimize_with_] SetToRotation(4)
+2010/10/28 18:07:06 21428 INFO  [optimize_with_] Order 4 rotation: spent_plan_money=0.0030 cents, spent_plan_clicks=0.0030, good=1, to_turn_off=0, to_turn_on=0
+2010/10/28 18:07:06 21428 INFO  [get_avg_strate] Calc max cost ( 1 + 0.05 * 25929000000 / 32500000 ) * 32500000
+2010/10/28 18:07:06 21428 INFO  [optimize_with_] order 4: good after LimitMaxCost 1
+2010/10/28 18:07:06 21428 INFO  [optimize_with_] AutoBudget order 4 (total pr_ph=1, have costs=1)
+2010/10/28 18:07:06 21428 INFO  [    fork_state] AUTOBUDGET change sign, set state to -5
+2010/10/28 18:07:06 21428 INFO  [optimize_with_] 4: spent_plan_actions = 0.000297004437323438
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] Order 4 money total_to_spent= 6.1325 c, spent_plan = 0.5418 c, context_limit = 95, broad=off, ab_problems = 0
+2010/10/28 18:07:06 21428 INFO  [autobudget_mai] Order 4 clicks total_to_spent = 0.0000, spent_plan = 0.0046
+2010/10/28 18:07:06 21428 INFO  [calc_flat_bids] Calculate net bids for order 4
+2010/10/28 18:07:06 21428 INFO  [calc_flat_bids] Order 4, total clicks capacity: 0.01
+2010/10/28 18:07:06 21428 INFO  [calc_flat_bids] Order 4 net limits: eis 0.0583$, eic 0.0000, eir 212.1878$
+2010/10/28 18:07:06 21428 INFO  [calc_flat_bids] Order 4, net_plan_money: 0.06$, net_plan_clicks: 0.03
+######### Forked, but do not know how to create a new TTY. #########
+  Since two debuggers fight for the same TTY, input is severely entangled.
+
+  I know how to switch the output to a different window in xterms, OS/2
+  consoles, and Mac OS X Terminal.app only.  For a manual switch, put the name
+  of the created TTY in $DB::fork_TTY, or define a function
+  DB::get_fork_TTY() returning this.
+
+  On UNIX-like systems one can get the name of a TTY for the given window
+  by typing tty, and disconnect the shell from TTY by sleep 1000000.
+
+main::CODE(0x6a08320)(/home/yabs/stat/autobudget.pl:1368):
+1368:                   if ( defined( $ostat->[$O_EIV]->{eis} ) ) {
+[pid=20320->21428]  DB<3> x $spent_plan_money
+0  5417.6584060125
+

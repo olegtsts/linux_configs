@@ -1,0 +1,46 @@
+https://codesearch.viewer.yandex-team.ru/#!PhrasePrice,,wj,null,%2Fft%2F%7C%2Ft%2F%7C%5C.js%24%7Cpostinstall-scripts%7C%2Fpt%2F
+
+Нужность удаленных фраз
+
+pgriffin:
+уже есть архивация тут Yabs/Stat/Collectors/RankRequest.pm
+надо разобраться, зачем она
+
+mstebelev:
+ads/targeting/ml-server-transport/scripts/mk_sharding_base.py
+ads/targeting/bsyeti/utils/tools/process-log
+ads/targeting/bsmr-scripts/py-modules/logjoin/banner_to_texts.py
+ads/targeting/bsmr-scripts/join_bstat.py
+ads/targeting/bsmr-scripts/conf/join_bstat.conf
+ads/quality/experiments/direct_quorum/lib/extract_phrases.cpp
+ads/quality/adv_machine/scripts/collect_streams.py
+ads/quality/adv_machine/lib/mr_prepare/streams.cpp
+ads/quality/adv_machine/lib/mr_stuff/broad_match.cpp
+
+zasalamel, antilost
+yabs/interface/yabs-bsadm-www/bsadm.yandex.ru/interface/perl/checkstat.cgi
+ExpStat2PhrasePriceBufMasterData
+
+antilost:
+Yabs/Stat/Collectors/BannerInfo.pm
+Yabs/Stat/Collectors/BroadMatchSet.pm
+Yabs/Stat/Collectors/LocalOrderInfo.pm
+Yabs/Stat/Collectors/PhraseDict.pm
+
+
+desertfury:
+phraseprice-deleted-days в движке -- что это за константа, почему фраза подружается?
+
+poldnev:
+не надо ли удалить скрипт? yabs/stat/auction-stat/clean-pauction-option.pl
+удаленные фразы тут yabs/stat/auction-stat/update-pauction-option.pl
+
+
+движок: (phraseprice-deleted-days)
+yabs/server/libs/mkdb/banner.cpp
+yabs/server/libs/server/ext_costs.cpp
+
+
+
+....
+

@@ -1,0 +1,31 @@
+Релиз Автобюждета:
+	логи:
+		collect-chevent
+		collect-visit
+		autobudget
+		load-search-conv
+
+	Yabs/AutoBudget/LoadData.pm -- загрузка PhrasePrice
+	коллекторы chevent
+		ABBannerPhraseCurWeek -- тут есть дебаговое сообщение о том с кем джойниться и надо проверять содержимое таблицы
+		AutoBudgetMonitoringEvent -- тут можно проверять график banner_phrase_overdraft в мониторинге Автобюджета
+		AutoBudgetMonitoringAvgPhraseFreqEvent.pm
+	коллекторы visit
+		AutoBudgetMonitoringAvgPhraseFreqVisit.pm
+	альтеры
+		альтерится TmpABPriorityPhraseHitsUndef -- надо проверять как альтерится
+	Ядро:
+		в таблицу пробрасывания экспериментов добавляется OrderID, GroupExportID -- но это только при эксперименте
+		atomic update -- тут делается логика с разделеннымми join
+
+	AutoBudgetSearchVisit -- разобраться, почему выключен скрипт ??
+
+Другие правки:
+	been turned off, skip PhrasePrice updat
+	apply result slave timeout
+
+
+
+p_exec bstat6...yandex.ru mysql -uroot yabsdb -e 'desc TmpABPriorityPhraseHitsUndef'|grep GroupExportID
+
+

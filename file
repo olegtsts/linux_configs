@@ -1,0 +1,89 @@
+olegts@bsyt01i:/mnt/raid/home/olegts$ YT_TOKEN=05f82278066d4261921fcd15c24f2cb3 YT_PROXY=seneca-sas.yt.yandex.net YT_VERSION=v3 YT_ARGUMENTS_FORMAT=json yt2 select-rows "* from [//yabs/OrderCounter] where OrderID = 7287790 and UpdateTime = 1449867600 and ParentBannerID = 1083476351   and Clicks > 0 and TargetPhraseID = 85u and BannerID = 1094928298 " --format=json|tr ',' '\n'
+{"OrderHash":3728552088598526952
+"OrderID":7287790
+"UpdateTime":1449867600
+"BannerID":1094928298
+"PhraseID":16498713795587606281
+"ContextType":8
+"RegionID":2
+"PageID":49688
+"TypeID":2
+"ResourceNo":1
+"PageNo":0
+"DeviceType":7
+"Gender":-1
+"Age":4
+"CoefGoalContextID":0
+"TargetPhraseID":85
+"DetailedDeviceType":33
+"ConnectionType":0
+"StatisticRegionID":null
+"ParentBannerID":1083476351
+"Clicks":2
+"IsFlat":1
+"IsImage":0
+"GroupExportID":1104472038
+"ParentExportID":1518785798
+"Shows":0
+"Cost":188800
+"CostCur":56640
+"ShowsSumPosition":0
+"ClicksSumPosition":6
+"SessionNum":null
+"SessionLen":null
+"SessionCost":null
+"GoalsNum":null
+"SessionDepth":null
+"Bounces":null}
+
+:) select *  from OrderCounter where  OrderID = 7287790 and EventDate = toDate('2015-12-12') and ParentBannerID = 1083476351 and Clicks > 0 and TargetPhraseID = 85 and BannerID = 1094928298 \G
+
+SELECT *
+FROM OrderCounter
+WHERE (OrderID = 7287790) AND (EventDate = toDate('2015-12-12')) AND (ParentBannerID = 1083476351) AND (Clicks > 0) AND (TargetPhraseID = 85) AND (BannerID = 1094928298)
+
+↖ Progress: 16.38 thousand rows, 1.47 MB (141.94 thousand rows/s., 12.78 MB/s.) Row 1:
+──────
+OrderID:            7287790
+EventDate:          2015-12-12
+BannerID:           1094928298
+PhraseID:           16498713795587606281
+ContextType:        8
+RegionID:           2
+StatisticRegionID:  0
+PageID:             49688
+TypeID:             2
+ResourceNo:         1
+PageNo:             0
+DeviceType:         7
+Gender:             -1
+Age:                4
+CoefGoalContextID:  0
+TargetPhraseID:     85
+IsFlat:             1
+IsImage:            0
+GroupExportID:      1104472038
+ParentBannerID:     1083476351
+ParentExportID:     1518785798
+DetailedDeviceType: 33
+ConnectionType:     0
+Shows:              0
+Clicks:             1
+Cost:               110133
+CostCur:            33040
+ShowsSumPosition:   0
+ClicksSumPosition:  2
+SessionNum:         0
+SessionLen:         0
+SessionCost:        0
+GoalsNum:           0
+SessionDepth:       0
+Bounces:            0
+GoalsMap.ID:        []
+GoalsMap.Num:       []
+GoalsMap.PriceCur:  []
+↑ Progress: 40.96 thousand rows, 7.21 MB (256.63 thousand rows/s., 45.17 MB/s.)
+1 rows in set. Elapsed: 0.160 sec. Processed 40.96 thousand rows, 7.21 MB (256.57 thousand rows/s., 45.16 MB/s.)
+
+
+

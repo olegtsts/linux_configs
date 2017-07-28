@@ -1,0 +1,35 @@
+Нужность удаленных фраз
+
+mstebelev:
+ads/targeting/ml-server-transport/scripts/mk_sharding_base.py
+ads/targeting/bsyeti/utils/tools/process-log
+ads/targeting/bsmr-scripts/test_pt/test_integration_banner_to_texts.py
+ads/targeting/bsmr-scripts/py-modules/logjoin/banner_to_texts.py
+ads/targeting/bsmr-scripts/join_bstat.py
+ads/targeting/bsmr-scripts/conf/join_bstat.conf
+ads/quality/experiments/direct_quorum/lib/extract_phrases.cpp
+ads/quality/adv_machine/scripts/collect_streams.py
+ads/quality/adv_machine/lib/mr_prepare/streams.cpp
+
+zasalamel, antilost
+yabs/interface/yabs-bsadm-www/bsadm.yandex.ru/interface/perl/checkstat.cgi
+
+kat0d:
+yabs/interface/yabs-bssoap-export/cgi/export_order-auction-info.cgi
+
+desertfury:
+phraseprice-deleted-days в движке -- что это за константа, почему фраза подружается?
+
+pgriffin:
+уже есть архивация тут Yabs/Stat/Collectors/RankRequest.pm
+
+poldnev:
+не надо ли удалить скрипт? yabs/stat/auction-stat/clean-pauction-option.pl
+удаленные фразы тут yabs/stat/auction-stat/update-pauction-option.pl
+
+zurom:
+yabs/stat/audit-yabs-direct/Yabs/Auditor/BK.pm
+
+pgriffin:
+yabs/stat/autofocus/Yabs/AutoFocus.pm
+

@@ -1,0 +1,126 @@
+1) yabs/stat/bstat-collectors/Yabs/Stat/MetricHelpers.pm
+метод update_supported_metric_tables
+используется в DirectStatCommon,OrderCounter,OrderSearchQuery,OrderStatDay
+
+2) yabs/stat/bstat-common/Yabs/Stat/LocalHelper.pm
+метод fill_price_cur
+используется в OrderCounter,OrderSearchQuery,OrderStatDay
+
+3) yabs/stat/audit-stat/Yabs/Stat/Checkers/OrderStatDayVsArchive.pm
+
+Нужно дописывать аудит
+
+4) yabs/stat/bstat-collectors/Yabs/Stat/Collectors/OrderCounter.pm
+yabs/stat/yabs-bsyt/Yabs/Stat/Collectors/YTOrderCounter.pm
+yabs/stat/bstat-collectors-clickhouse/Yabs/Stat/Collectors/ClickHouseOrderCounter.pm
+yabs/stat/yabs-bsyt/Yabs/Stat/Collectors/YTOrderCounterGoalStat.pm
+
+нужно переделывать
+
+5) yabs/stat/bstat-repair/Yabs/DProcess/CustomSubs/BStatRepairStat.pm
+репеиринг статистики надо подготовить
+
+6)Коллекторы прогнозатора
+yabs/utils/autobudget-forecast/Yabs/Stat/Collectors/AutoBudgetConv.pm
+yabs/utils/autobudget-forecast/Yabs/Stat/Collectors/AutoBudgetForecasterAPCMonitoring.pm
+
+Коллекторы АБ:
+yabs/stat/yabs-autobudget2/Yabs/DProcess/CustomSubs/AutoBudgetSearchVisit.pm
+yabs/stat/yabs-autobudget2/Yabs/Stat/Collectors/ABBannerPhraseCurWeek.pm
+yabs/stat/yabs-autobudget2/Yabs/Stat/Collectors/ABCurWeekConv.pm
+yabs/stat/yabs-autobudget2/Yabs/Stat/Collectors/ABExperimentCurWeekConv.pm
+yabs/stat/yabs-autobudget2/Yabs/Stat/Collectors/ABGroupExperimentDay.pm
+yabs/stat/yabs-autobudget2/Yabs/Stat/Collectors/ABGroupExportPhraseStatDay.pm
+yabs/stat/yabs-autobudget2/Yabs/Stat/Collectors/AutoBudgetActions.pm
+yabs/stat/yabs-autobudget2/Yabs/Stat/Collectors/AutoBudgetMonitoringAvgPhraseFreqVisit.pm
+yabs/stat/yabs-autobudget2/Yabs/Stat/Collectors/AutoBudgetMonitoringVisit.pm
+
+nyaapa yabs/stat/bsistat02/search_query_apc_forecaster_helper.pl
+
+коллектор yabs/stat/bstat-collectors/Yabs/Stat/Collectors/DirectStatCommon.pm
+собираер таблицу DirectPhraseStat
+нужна в interface/yabs-bsint-www/bsint.yandex.ru/cgi-bin/retargetinginfo.cgi
+нужна в interface/yabs-bssoap-export/cgi/export_broadmatch_stat.cgi
+нужна в interface/yabs-bssoap-export/cgi/export_summarydomain.cgi
+нужна в interface/yabs-export-scripts-direct/cgi/export_broadmatch_stat2.cgi
+нужна в interface/yabs-export-scripts-direct/cgi/export_broadmatch_stat2.cgi
+нужна в Yabs/DProcess/CustomSubs/BroadMatchPriceCoeff.pm
+
+
+zasalamel
+yabs/stat/bstat-collectors/Yabs/Stat/Collectors/OrderSearchQuery.pm
+собирает таблицу OrderSearchQuery
+зачем коллектор?
+
+yabs/stat/bstat-collectors/Yabs/Stat/Collectors/OrderStatDay.pm
+собирает таблицу OrderStatDayщ
+очень много мест,в том числе директовские ручки
+
+
+yabs/stat/bstat-collectors/Yabs/Stat/Collectors/SummaryDomainVisit.pm
+собирает таблицу SummaryDomainVisit
+для DomainStatVisit
+
+
+yabs/stat/yabs-bsyt/Yabs/Stat/Collectors/YTPerformanceStat.pm
+собирает таблицу YTPerformanceStat
+для чего таблица?
+
+==========
+
+Архивные визиты
+
+trunk/arcadia/yabs/history/yabs-stat-helper/Yabs/Stat/RequestParts.pm -- функция get_request_parts_common
+trunk/arcadia/yabs/stat/bsistat02/search_query_apc_forecaster_helper.pl
+trunk/arcadia/yabs/stat/bssoap/send-visithistorylog.pl
+trunk/arcadia/yabs/stat/dropstat/bsadm-scripts/dayorderstat2-daemon.pl
+trunk/arcadia/yabs/stat/yabs-autobudget2/Yabs/DProcess/CustomSubs/AutoBudgetSearchVisit.pm
+trunk/arcadia/yabs/utils/yabs-stat-tools/archive-select
+
+
+
+
+
+https://www.draw.io/#G0B8JNw57Hi2UbOWsxX2tzaXYzazg
+
+схема задачи
+
+
+
+=======================
+
+Итоговые коллекторы, которые надо переделать:
+
+/export/detailed-order-stat.cgi — детальная
+/export/master-report.cgi — МОЛ
+/export/direct-aggregated-stat-uni.cgi — стримовая
+/export/exp_stat_order_stat_day.cgi — подневная инкрементальная статистика
+
+
+OrderStatDay
+придется исправлять еще и аудит
+
+Коллекторы Автобюджета:
+ABBannerPhraseCurWeek
+ABCurWeekConv
+ABExperimentCurWeekConv
+ABGroupExperimentDay
+ABGroupExportPhraseStatDay
+AutoBudgetActions.pm
+AutoBudgetMonitoringAvgPhraseFreqVisit
+AutoBudgetMonitoringVisit
+
+Коллекторы прогнозатора
+AutoBudgetConv
+AutoBudgetForecasterAPCMonitoring.pm
+
+Коллекоры где надо написать AT = 1
+DirectStatCommon.pm
+OrderSearchQuery.pm
+OrderStatChange.pm
+SummaryDomainVisit.pm
+! yabs/stat/bstat-collectors/Yabs/Stat/MetricHelpers.pm
+! /stat/bstat-common/Yabs/Stat/LocalHelper.pm функция fill_price_cur
+! BStatRepairStat.pm
+
+
