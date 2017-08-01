@@ -119,7 +119,7 @@ module CppAutoInclude
     ['cstring',        true , true , R[F['memcmp']] ],
     ['chrono',         true , true , R[C['chrono']] ],
     ['mutex',          true , true , R[C['mutex']] ],
-    ['condition_variable', true, true, R[C['condition_variable']] ],
+    ['condition_variable', true, true, R[C['condition_variable'], C['condition_variable_any']] ],
   ]
 
   # do nothing if lines.count > LINES_THRESHOLD
