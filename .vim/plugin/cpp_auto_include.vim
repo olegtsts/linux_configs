@@ -116,7 +116,6 @@ module CppAutoInclude
     ['functional',     true , true , R[F['ref'],T['function'],F['mem_fn']] ],
     ['thread',         true , true , R[F['thread'], C['thread'], C['this_thread']] ],
     ['memory',         true , true , R[T['make_shared', 'unique_ptr', 'shared_ptr', 'auto_ptr']] ],
-    ['cstring',        true , true , R[F['memcmp']] ],
     ['chrono',         true , true , R[C['chrono']] ],
     ['mutex',          true , true , R[C['mutex']] ],
     ['condition_variable', true, true, R[C['condition_variable'], C['condition_variable_any']] ],

@@ -136,17 +136,17 @@ function CheckSyntax()
         if &filetype != ''
                 let cmd=''
                 if &filetype == 'perl'
-                        let cmd='PERL5LIB=./ perl -wc '
+                        let cmd='PERL5LIB=./ perl -wc '.expand('%')
                 elseif &filetype == 'c'
-                        let cmd='gcc -fsyntax-only -pedantic '
+                        let cmd='gcc -fsyntax-only -pedantic '.expand('%')
                 elseif &filetype == 'cpp'
-                        let cmd='g++-5 -mcx16 -g -pthread -latomic -std=c++1z -pedantic -Wall '
+                        let cmd='g++-7 '.expand('%').expand(' -mcx16 -g -pthread -latomic -std=c++1z -pedantic -Wall -ldl -rdynamic -lunwind -lbacktrace -lprotobuf')
                 elseif &filetype == 'sh'
-                        let cmd='bash -n '
+                        let cmd='bash -n '.expand('%')
                 endif
 
                 if cmd != ''
-                        let output = system(cmd.expand('%').expand(' 2>&1 && echo "OK" | grep -v INFO | grep -v WARN'))
+                        let output = system(cmd.expand(' 2>&1 && echo "OK" | grep -v INFO | grep -v WARN'))
                         echo strpart(output, 0, strlen(output)-1)
                 else
                         echo 'Have no idea how to check sytax for filetype '.&ft
