@@ -119,6 +119,7 @@ module CppAutoInclude
     ['chrono',         true , true , R[C['chrono']] ],
     ['mutex',          true , true , R[C['mutex']] ],
     ['condition_variable', true, true, R[C['condition_variable'], C['condition_variable_any']] ],
+    ['tuple',          true , true , R[F['tie', 'make_tuple']] ],
   ]
 
   # do nothing if lines.count > LINES_THRESHOLD
