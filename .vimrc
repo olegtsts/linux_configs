@@ -277,5 +277,4 @@ if has("autocmd")
 endif
 
 " Indent inside lambda
-setlocal cindent cino=j1,(0,ws,Ws,g0,L0
-
+autocmd BufEnter *.cpp setlocal cindent cino=j1,(0,ws,Ws,g0,L0
