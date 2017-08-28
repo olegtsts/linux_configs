@@ -2,10 +2,11 @@ syntax on
 filetype plugin indent on
 imap <Nul> <C-X><C-U>
 imap § <C-P>
-imap <C-t> <Esc> :call PrepareTicket() <Enter>
+"map <C-t> :call PrepareTicket() <Enter>
+imap <C-t> <Esc> :call PrepareTicket() <Enter> i
 vnoremap <silent><C-c> :call Comment()<Enter>
 vnoremap <silent><C-u> :call UnComment()<Enter>
-vnoremap <silent><C-t> :call PrepareTicket() <Enter>
+"vnoremap <silent><C-t> :call PrepareTicket() <Enter>
 map <C-x> : call SetConsole() <Enter>
 imap <C-x> <ESC>: call SetConsole() <Enter> i
 vnoremap <silent><C-x> :call SetConsole() <Enter>
@@ -67,7 +68,11 @@ function SetConsole()
 endfunction
 
 function PrepareTicket()
-	:s/^.*\/\([^\/]\+$\)/\1:\r\r/g
+	let l:line = getline(line('.') - 1)
+	echo l:line
+	let l:new_line = substitute(l:line, '^.*\/\([^\/]\+$\)', '\1:  ', "g")
+	call setline(line('.') - 1, l:new_line)
+	call cursor(line('.') - 1, len(l:new_line) - 1)
 endfunction
 
 function Comment()
