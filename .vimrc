@@ -43,6 +43,7 @@ au BufNewFile,BufRead *.cpp set syntax=cpp
 autocmd BufEnter * :syntax sync fromstart
 autocmd BufEnter *.py set ai sw=4 ts=4 sta et fo=croql softtabstop=4
 autocmd BufEnter *.cpp set ai sw=4 ts=4 sta et fo=croql softtabstop=4
+autocmd BufEnter *.proto set ai sw=4 ts=4 sta et fo=croql softtabstop=4
 autocmd BufEnter *.h set ai sw=4 ts=4 sta et fo=croql softtabstop=4
 autocmd BufEnter *.make set ai sw=4 ts=4 sta et fo=croql softtabstop=4
 autocmd BufEnter *.pyx set ai sw=4 ts=4 sta et fo=croql softtabstop=4
