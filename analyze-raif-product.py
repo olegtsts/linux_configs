@@ -3,11 +3,16 @@ from collections import defaultdict
 import sys
 filename = sys.argv[1]
 all_descs = defaultdict(int)
+money_sum = defaultdict(int)
 with open(filename, 'r') as f:
     first_line = True
     for line in f.read().decode('windows-1251').encode('utf8').strip().split('\n'):
-        description = line.split(';')[1]
-        if sum(letter >= 'а' and letter <= 'я' for letter in description) > 0 and not(first_line):
-            all_descs[description] += 1
+        if not(first_line):
+            description = line.split(';')[1]
+            money = line.split(';')[3]
+            if sum(letter >= 'а' and letter <= 'я' for letter in description) > 0 :
+                all_descs[description] += 1
+                money_sum[description] += float(money.replace(' ', ''))
         first_line = False
-print("\n".join('{desc}\t{count}'.format(desc=v[1], count=v[0]) for v in sorted([(all_descs[k], k) for k in all_descs])))
+print("decription\tcount\ttotal_money")
+print("\n".join('{desc}\t{count}\t{money}'.format(desc=v[1], count=v[0], money=money_sum[v[1]]) for v in sorted([(all_descs[k], k) for k in all_descs])))
